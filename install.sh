@@ -107,13 +107,13 @@ gcloud app create --region=$APPENGINE_REGION
 echo 'Creating Firestore database...'
 
 # Try 5 times, it could take a while for api enablement to propogate
-n=0
-until [ "$n" -ge 5 ]
-do
-   gcloud alpha firestore databases create --location=$APPENGINE_REGION && break  
-   n=$((n+1)) 
-   sleep 30
-done
+#n=0
+#until [ "$n" -ge 5 ]
+#do
+#   gcloud alpha firestore databases create --location=$APPENGINE_REGION && break  
+#   n=$((n+1)) 
+#   sleep 30
+#done
 
 #
 # Create artifact registry for storing container image.
