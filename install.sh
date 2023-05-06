@@ -110,7 +110,7 @@ echo 'Creating Firestore database...'
 n=0
 until [ "$n" -ge 5 ]
 do
-   gcloud alpha firestore databases create --region=$APPENGINE_REGION && break  
+   gcloud alpha firestore databases create --location=$APPENGINE_REGION && break  
    n=$((n+1)) 
    sleep 30
 done
