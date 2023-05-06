@@ -118,9 +118,9 @@ echo 'Creating Firestore database...'
 #
 # Create artifact registry for storing container image.
 #
-REGION=$(gcloud config list --format 'value(run.region)')
-echo 'Creating artifact registry in ' + $REGION
-
+#REGION=$(gcloud config list --format 'value(run.region)')
+#echo 'Creating artifact registry in ' + $REGION
+REGION=us-east1
 gcloud artifacts repositories create eventssample \
     --repository-format=Docker \
     --location=$REGION
